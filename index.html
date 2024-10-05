@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/dashboard-page/dashboard.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script type="module" crossorigin src="/dashboard-page/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/dashboard-page/assets/index-Bd5O_tDp.css">
+  </head>
+  <body>
+    <div id="include-header" data-include="partials/header.html" class="header">
+      <div class="sidebar__logo">
+        <img src="data:image/svg+xml,%3csvg%20width='37'%20height='37'%20viewBox='0%200%2037%2037'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M18.5003%2034.8876C17.4674%2034.8876%2016.419%2034.6564%2015.602%2034.1784L7.12284%2029.2914C3.66951%2026.9634%203.45367%2026.6089%203.45367%2022.9551V14.0443C3.45367%2010.3905%203.65409%2010.0359%207.04576%207.73887L15.5865%202.80553C17.2053%201.86512%2019.749%201.86512%2021.3678%202.80553L29.8778%207.70803C33.3311%2010.0359%2033.547%2010.3905%2033.547%2014.0443V22.9397C33.547%2026.5934%2033.3465%2026.948%2029.9549%2029.2451L21.414%2034.1784C20.5815%2034.6564%2019.5332%2034.8876%2018.5003%2034.8876ZM18.5003%204.42428C17.8528%204.42428%2017.2207%204.54762%2016.7736%204.8097L8.29451%209.7122C5.78159%2011.408%205.78159%2011.408%205.78159%2014.0443V22.9397C5.78159%2025.5759%205.78159%2025.5759%208.35617%2027.318L16.7736%2032.1743C17.6832%2032.6984%2019.3328%2032.6984%2020.2424%2032.1743L28.7215%2027.2718C31.219%2025.5759%2031.219%2025.5759%2031.219%2022.9397V14.0443C31.219%2011.408%2031.219%2011.408%2028.6445%209.66595L20.227%204.8097C19.7799%204.54762%2019.1478%204.42428%2018.5003%204.42428Z'%20fill='black'%20/%3e%3cpath%20d='M18.5%2024.2812C15.3088%2024.2812%2012.7188%2021.6912%2012.7188%2018.5C12.7188%2015.3088%2015.3088%2012.7188%2018.5%2012.7188C21.6912%2012.7188%2024.2812%2015.3088%2024.2812%2018.5C24.2812%2021.6912%2021.6912%2024.2812%2018.5%2024.2812ZM18.5%2015.0312C16.5883%2015.0312%2015.0312%2016.5883%2015.0312%2018.5C15.0312%2020.4117%2016.5883%2021.9688%2018.5%2021.9688C20.4117%2021.9688%2021.9688%2020.4117%2021.9688%2018.5C21.9688%2016.5883%2020.4117%2015.0312%2018.5%2015.0312Z'%20fill='black'%20/%3e%3c/svg%3e" alt="logo" />
+        <span>v.01</span>
+      </div>
+      <button
+        class="sidebar__toggle"
+        aria-label="Toggle sidebar navigation"
+        aria-expanded="false"
+        aria-controls="sidebar-container"
+        id="sidebarToggle"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <div id="sidebar-container" data-include="partials/sidebar.html"></div>
+
+    <main class="content">
+      <h1>
+        <span id="typed-text"></span>
+        <span id="wave-emoji" class="wave-emoji">👋🏼</span>
+      </h1>
+
+      <section id="dashboard-section" class="content-section active">
+        Welcome to your dashboard!
+        <br />Here you can get an overview of your business performance, track
+        your progress, and manage key metrics at a glance.
+      </section>
+      <section id="product-section" class="content-section">
+        Manage your product listings, update inventory, and track sales trends.
+        Stay informed about your product performance and make adjustments as
+        needed.
+      </section>
+      <section id="customers-section" class="content-section"></section>
+      <section id="income-section" class="content-section">
+        Monitor your earnings and cash flow. This section helps you track
+        revenue, analyze income streams, and optimize financial strategies for
+        growth.
+      </section>
+      <section id="promote-section" class="content-section">
+        Boost your business with targeted promotions and marketing strategies.
+        Create campaigns to engage customers and drive more traffic to your
+        store.
+      </section>
+      <section id="help-section" class="content-section">
+        Need assistance? Browse through our help articles, FAQs, or get in touch
+        with support to resolve any issues you encounter.
+      </section>
+    </main>
+
+    <script>
+      fetch('./partials/sidebar.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('sidebar-container').innerHTML = data;
+        })
+        .catch((error) => console.error('Error loading sidebar.html:', error));
+
+      fetch('./partials/customers.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('customers-section').innerHTML = data;
+        })
+        .catch((error) =>
+          console.error('Error loading customers.html:', error)
+        );
+    </script>
+
+  </body>
+</html>
