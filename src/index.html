@@ -19,22 +19,8 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   </head>
   <body>
-    <div id="include-header" data-include="partials/header.html" class="header">
-      <div class="sidebar__logo">
-        <img src="./assets/icons/dashboard.svg" alt="logo" />
-        <span>v.01</span>
-      </div>
-      <button
-        class="sidebar__toggle"
-        aria-label="Toggle sidebar navigation"
-        aria-expanded="false"
-        aria-controls="sidebar-container"
-        id="sidebarToggle"
-      >
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-    <div id="sidebar-container" data-include="partials/sidebar.html"></div>
+    <load ="partials/header.html" />
+    <load ="partials/sidebar.html" />
 
     <main class="content">
       <h1>
@@ -52,7 +38,9 @@
         Stay informed about your product performance and make adjustments as
         needed.
       </section>
-      <section id="customers-section" class="content-section"></section>
+      <section id="customers-section" class="content-section">
+        <load ="partials/customers.html" />
+      </section>
       <section id="income-section" class="content-section">
         Monitor your earnings and cash flow. This section helps you track
         revenue, analyze income streams, and optimize financial strategies for
@@ -68,24 +56,6 @@
         with support to resolve any issues you encounter.
       </section>
     </main>
-
-    <script>
-      fetch('./partials/sidebar.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById('sidebar-container').innerHTML = data;
-        })
-        .catch((error) => console.error('Error loading sidebar.html:', error));
-
-      fetch('./partials/customers.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById('customers-section').innerHTML = data;
-        })
-        .catch((error) =>
-          console.error('Error loading customers.html:', error)
-        );
-    </script>
 
     <script type="module" src="./main.js"></script>
   </body>

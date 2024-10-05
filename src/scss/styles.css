@@ -198,6 +198,7 @@ img {
 .customers-section__pagination-container .pagination {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 30px;
   gap: 16px;
 }
@@ -205,7 +206,6 @@ img {
   .customers-section__pagination-container .pagination {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 }
 .customers-section__pagination-container .showing-data {
@@ -329,6 +329,7 @@ img {
   min-height: 100vh;
   padding: 36px 28px 76px;
   background-color: #ffffff;
+  box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5019607843);
   gap: 64px;
   transition: transform 0.3s ease;
   overflow-y: auto;
