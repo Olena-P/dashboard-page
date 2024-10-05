@@ -21,21 +21,127 @@
   </head>
   <body>
     <div id="include-header" data-include="partials/header.html" class="header">
-      <div class="sidebar__logo">
-        <img src="data:image/svg+xml,%3csvg%20width='37'%20height='37'%20viewBox='0%200%2037%2037'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M18.5003%2034.8876C17.4674%2034.8876%2016.419%2034.6564%2015.602%2034.1784L7.12284%2029.2914C3.66951%2026.9634%203.45367%2026.6089%203.45367%2022.9551V14.0443C3.45367%2010.3905%203.65409%2010.0359%207.04576%207.73887L15.5865%202.80553C17.2053%201.86512%2019.749%201.86512%2021.3678%202.80553L29.8778%207.70803C33.3311%2010.0359%2033.547%2010.3905%2033.547%2014.0443V22.9397C33.547%2026.5934%2033.3465%2026.948%2029.9549%2029.2451L21.414%2034.1784C20.5815%2034.6564%2019.5332%2034.8876%2018.5003%2034.8876ZM18.5003%204.42428C17.8528%204.42428%2017.2207%204.54762%2016.7736%204.8097L8.29451%209.7122C5.78159%2011.408%205.78159%2011.408%205.78159%2014.0443V22.9397C5.78159%2025.5759%205.78159%2025.5759%208.35617%2027.318L16.7736%2032.1743C17.6832%2032.6984%2019.3328%2032.6984%2020.2424%2032.1743L28.7215%2027.2718C31.219%2025.5759%2031.219%2025.5759%2031.219%2022.9397V14.0443C31.219%2011.408%2031.219%2011.408%2028.6445%209.66595L20.227%204.8097C19.7799%204.54762%2019.1478%204.42428%2018.5003%204.42428Z'%20fill='black'%20/%3e%3cpath%20d='M18.5%2024.2812C15.3088%2024.2812%2012.7188%2021.6912%2012.7188%2018.5C12.7188%2015.3088%2015.3088%2012.7188%2018.5%2012.7188C21.6912%2012.7188%2024.2812%2015.3088%2024.2812%2018.5C24.2812%2021.6912%2021.6912%2024.2812%2018.5%2024.2812ZM18.5%2015.0312C16.5883%2015.0312%2015.0312%2016.5883%2015.0312%2018.5C15.0312%2020.4117%2016.5883%2021.9688%2018.5%2021.9688C20.4117%2021.9688%2021.9688%2020.4117%2021.9688%2018.5C21.9688%2016.5883%2020.4117%2015.0312%2018.5%2015.0312Z'%20fill='black'%20/%3e%3c/svg%3e" alt="logo" />
-        <span>v.01</span>
-      </div>
-      <button
-        class="sidebar__toggle"
-        aria-label="Toggle sidebar navigation"
-        aria-expanded="false"
-        aria-controls="sidebar-container"
-        id="sidebarToggle"
-      >
-        <i class="fa-solid fa-bars"></i>
-      </button>
+  <div class="sidebar__logo">
+    <img src="data:image/svg+xml,%3csvg%20width='37'%20height='37'%20viewBox='0%200%2037%2037'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M18.5003%2034.8876C17.4674%2034.8876%2016.419%2034.6564%2015.602%2034.1784L7.12284%2029.2914C3.66951%2026.9634%203.45367%2026.6089%203.45367%2022.9551V14.0443C3.45367%2010.3905%203.65409%2010.0359%207.04576%207.73887L15.5865%202.80553C17.2053%201.86512%2019.749%201.86512%2021.3678%202.80553L29.8778%207.70803C33.3311%2010.0359%2033.547%2010.3905%2033.547%2014.0443V22.9397C33.547%2026.5934%2033.3465%2026.948%2029.9549%2029.2451L21.414%2034.1784C20.5815%2034.6564%2019.5332%2034.8876%2018.5003%2034.8876ZM18.5003%204.42428C17.8528%204.42428%2017.2207%204.54762%2016.7736%204.8097L8.29451%209.7122C5.78159%2011.408%205.78159%2011.408%205.78159%2014.0443V22.9397C5.78159%2025.5759%205.78159%2025.5759%208.35617%2027.318L16.7736%2032.1743C17.6832%2032.6984%2019.3328%2032.6984%2020.2424%2032.1743L28.7215%2027.2718C31.219%2025.5759%2031.219%2025.5759%2031.219%2022.9397V14.0443C31.219%2011.408%2031.219%2011.408%2028.6445%209.66595L20.227%204.8097C19.7799%204.54762%2019.1478%204.42428%2018.5003%204.42428Z'%20fill='black'%20/%3e%3cpath%20d='M18.5%2024.2812C15.3088%2024.2812%2012.7188%2021.6912%2012.7188%2018.5C12.7188%2015.3088%2015.3088%2012.7188%2018.5%2012.7188C21.6912%2012.7188%2024.2812%2015.3088%2024.2812%2018.5C24.2812%2021.6912%2021.6912%2024.2812%2018.5%2024.2812ZM18.5%2015.0312C16.5883%2015.0312%2015.0312%2016.5883%2015.0312%2018.5C15.0312%2020.4117%2016.5883%2021.9688%2018.5%2021.9688C20.4117%2021.9688%2021.9688%2020.4117%2021.9688%2018.5C21.9688%2016.5883%2020.4117%2015.0312%2018.5%2015.0312Z'%20fill='black'%20/%3e%3c/svg%3e" alt="logo" />
+    <span>v.01</span>
+  </div>
+  <button
+    class="sidebar__toggle"
+    aria-label="Toggle sidebar navigation"
+    aria-expanded="false"
+    aria-controls="sidebar-container"
+    id="sidebarToggle"
+  >
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</div>
+
+    <aside id="sidebar-container" class="sidebar" aria-label="Sidebar navigation">
+  <button
+    class="sidebar__close"
+    id="sidebarClose"
+    aria-expanded="true"
+    aria-label="Close sidebar"
+  >
+    <i class="fa-solid fa-times"></i>
+  </button>
+
+  <div class="sidebar__top">
+    <div class="sidebar__logo">
+      <img src="../assets/icons/logo.svg" alt="Company Logo" />
+      <span>v.01</span>
     </div>
-    <div id="sidebar-container" data-include="partials/sidebar.html"></div>
+    <nav class="sidebar__nav" aria-label="Sidebar navigation" role="navigation">
+      <ul class="sidebar__list" aria-label="Main sidebar navigation">
+        <li class="sidebar__item">
+          <a
+            href="#dashboard"
+            class="sidebar__link"
+            aria-label="Dashboard section"
+          >
+            <div class="sidebar__name">
+              <svg class="icon">
+                <use xlink:href="../assets/icons/sprite.svg#dashboard"></use>
+              </svg>
+              <span>Dashboard</span>
+            </div>
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#product" class="sidebar__link" aria-label="Product section">
+            <div class="sidebar__name">
+              <svg class="icon">
+                <use xlink:href="../assets/icons/sprite.svg#product"></use>
+              </svg>
+              <span>Product</span>
+            </div>
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a
+            href="#customers"
+            class="sidebar__link"
+            aria-label="Customers section"
+          >
+            <div class="sidebar__name">
+              <svg class="icon">
+                <use xlink:href="../assets/icons/sprite.svg#customers"></use>
+              </svg>
+              <span>Customers</span>
+            </div>
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#income" class="sidebar__link" aria-label="Income section">
+            <div class="sidebar__name">
+              <svg class="icon">
+                <use xlink:href="../assets/icons/sprite.svg#income"></use>
+              </svg>
+              <span>Income</span>
+            </div>
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#promote" class="sidebar__link" aria-label="Promote section">
+            <div class="sidebar__name">
+              <svg class="icon">
+                <use xlink:href="../assets/icons/sprite.svg#promote"></use>
+              </svg>
+              <span>Promote</span>
+            </div>
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#help" class="sidebar__link" aria-label="Help section">
+            <div class="sidebar__name">
+              <svg class="icon">
+                <use xlink:href="../assets/icons/sprite.svg#help"></use>
+              </svg>
+              <span>Help</span>
+            </div>
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="sidebar__user">
+    <img
+      src="../assets/images/user.png"
+      alt="Evano, Project Manager"
+      class="user-avatar"
+    />
+    <div class="user-info">
+      <p>Evano</p>
+      <span>Project Manager</span>
+    </div>
+  </div>
+</aside>
+
 
     <main class="content">
       <h1>
@@ -53,7 +159,57 @@
         Stay informed about your product performance and make adjustments as
         needed.
       </section>
-      <section id="customers-section" class="content-section"></section>
+      <section id="customers-section" class="content-section">
+        <div>
+  <div class="customers-section__header">
+    <div class="customers-section__header-content">
+      <h2 class="customers-section__title">All Customers</h2>
+      <button
+        class="customers-section__active-members"
+        aria-label="Filter active members"
+      >
+        Active members
+      </button>
+    </div>
+    <div class="customers-section__search-wrapper">
+      <input
+        type="text"
+        placeholder="Search"
+        id="search-input"
+        name="search"
+        class="customers-section__search-input"
+        aria-label="Search Customers"
+      />
+      <img
+        class="customers-section__search-icon"
+        src="../assets/icons/search.svg"
+        alt="search"
+      />
+    </div>
+  </div>
+  <div class="table-wrapper">
+    <table id="table-container" class="customer-table">
+      <thead>
+        <tr>
+          <th>Customer Name</th>
+          <th>Company</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Country</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div
+    id="pagination-container"
+    class="customers-section__pagination-container"
+    aria-live="polite"
+  ></div>
+</div>
+
+      </section>
       <section id="income-section" class="content-section">
         Monitor your earnings and cash flow. This section helps you track
         revenue, analyze income streams, and optimize financial strategies for
@@ -69,24 +225,6 @@
         with support to resolve any issues you encounter.
       </section>
     </main>
-
-    <script>
-      fetch('./partials/sidebar.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById('sidebar-container').innerHTML = data;
-        })
-        .catch((error) => console.error('Error loading sidebar.html:', error));
-
-      fetch('./partials/customers.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById('customers-section').innerHTML = data;
-        })
-        .catch((error) =>
-          console.error('Error loading customers.html:', error)
-        );
-    </script>
 
   </body>
 </html>
