@@ -6,7 +6,7 @@ const itemsPerPage = 8;
 
 export async function loadCustomerData() {
   try {
-    const response = await fetch('/public/customers.json');
+    const response = await fetch('/customers.json');
     if (!response.ok) throw new Error('Network response was not ok.');
     customers = await response.json();
     renderTable(currentPage);
