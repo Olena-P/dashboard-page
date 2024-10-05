@@ -1,0 +1,58 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 0px);
+  gap: 51px;
+  width: 100%;
+  padding: 40px 20px;
+  grid-area: 41px;
+  @include media(desktop) {
+    padding: 41px 71px;
+  }
+
+  .content-section {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  .wave-emoji {
+    display: inline-block;
+    opacity: 0;
+    transform-origin: bottom right;
+    transition: opacity 0.5s ease;
+  }
+
+  .wave-emoji.animate {
+    animation: wave 1s ease;
+    animation-iteration-count: 2;
+    opacity: 1;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(25deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  section {
+    padding: 16px 12px;
+    background-color: $white;
+    border-radius: 16px;
+    box-shadow: $shadow;
+
+    @include media(desktop) {
+      padding: 30px 40px 40px;
+      border-radius: 30px;
+    }
+  }
+}

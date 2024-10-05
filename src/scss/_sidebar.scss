@@ -1,0 +1,194 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 306px;
+  height: 100%;
+  min-height: 100vh;
+  padding: 36px 28px 76px;
+  background-color: $white;
+  box-shadow: $shadow;
+  gap: 64px;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  &.active {
+    transform: translateX(0);
+  }
+  @media screen and (max-width: $to-desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    z-index: 10;
+    width: 100vw;
+    padding: 14px 20px 40px;
+    gap: 24px;
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @include media(desktop) {
+      gap: 64px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-end;
+
+    span {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      margin-left: 8px;
+      margin-bottom: 6px;
+      color: $lighter-gray;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__item {
+    margin: 0;
+    user-select: none;
+    border-radius: 8px;
+    color: $gray;
+    transition: background-color 0.3s, width 0.3s;
+    &:hover {
+      background-color: $background-gray;
+      i {
+        animation: slide-left-right 0.6s ease-in-out;
+
+        @keyframes slide-left-right {
+          0% {
+            transform: translateX(0);
+          }
+          25% {
+            transform: translateX(-2px);
+          }
+          50% {
+            transform: translateX(0);
+          }
+          75% {
+            transform: translateX(2px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+    &--active,
+    &--active:hover {
+      background-color: $primary-color;
+      color: $white;
+
+      use {
+        stroke: $white;
+        fill: $white;
+        color: $white;
+      }
+    }
+
+    & .sidebar__link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 8px 11px 11px;
+      width: 100%;
+
+      .icon {
+        stroke: $gray;
+        font-size: 9px;
+      }
+      i {
+        font-size: 9px;
+      }
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+
+      color: $gray;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+}

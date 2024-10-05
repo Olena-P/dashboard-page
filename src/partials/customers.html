@@ -1,0 +1,48 @@
+<div>
+  <div class="customers-section__header">
+    <div class="customers-section__header-content">
+      <h2 class="customers-section__title">All Customers</h2>
+      <button
+        class="customers-section__active-members"
+        aria-label="Filter active members"
+      >
+        Active members
+      </button>
+    </div>
+    <div class="customers-section__search-wrapper">
+      <input
+        type="text"
+        placeholder="Search"
+        id="search-input"
+        name="search"
+        class="customers-section__search-input"
+        aria-label="Search Customers"
+      />
+      <img
+        class="customers-section__search-icon"
+        src="../assets/icons/search.svg"
+        alt="search"
+      />
+    </div>
+  </div>
+  <div class="table-wrapper">
+    <table id="table-container" class="customer-table">
+      <thead>
+        <tr>
+          <th>Customer Name</th>
+          <th>Company</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Country</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div
+    id="pagination-container"
+    class="customers-section__pagination-container"
+    aria-live="polite"
+  ></div>
+</div>
